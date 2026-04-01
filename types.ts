@@ -1,9 +1,10 @@
+// Changed: Made metadata optional on CosmicObject to align with optional metadata in derived types.
 export interface CosmicObject {
   id: string
   slug: string
   title: string
   content?: string
-  metadata: Record<string, unknown>
+  metadata?: Record<string, unknown> // Changed: Optional to prevent TS2430 incompatibility
   type?: string
   created_at?: string
   modified_at?: string
