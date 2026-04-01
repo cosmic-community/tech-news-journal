@@ -1,0 +1,35 @@
+{
+  "name": "tech-news-journal",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "bun@1.1.26",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "prebuild": "bun run type-check",
+    "postbuild": "node scripts/inject-console-capture.js"
+  },
+  "dependencies": {
+    "@cosmicjs/sdk": "^1.6.0",
+    "marked": "^12.0.2",
+    "next": "16.0.10",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "@types/node": "^20.11.30",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "autoprefixer": "^10.4.18",
+    "eslint": "^9.3.0",
+    "eslint-config-next": "16.0.10",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.6.3",
+    "glob": "^10.3.10"
+  }
+}
